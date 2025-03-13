@@ -7,9 +7,9 @@
           <button class="h-[46px] pl-6"><img src="/public/images/logo-right-gif.png" class="h-[46px]"></button>
         </div>
         <div class="flex items-center">
-          <div class="text-white text-lg">購物車</div>
-          <div class="text-white text-lg">會員專區</div>
-          <div class="text-white text-lg">登入</div>
+          <div class="text-white">購物車</div>
+          <div class="text-white">會員專區</div>
+          <div class="text-white">登入</div>
         </div>
       </div>
     </div>
