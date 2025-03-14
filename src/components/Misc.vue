@@ -1,8 +1,8 @@
 <script setup>
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue"
+import "swiper/css"
+import "swiper/css/navigation"
+import { Navigation } from "swiper/modules"
 
 const banners = [
   { img: "/public/images/2FFA73E5EC845DB2E06400144FF9CEC6_m.jpg" },
@@ -11,7 +11,7 @@ const banners = [
   { img: "/public/images/2AC8988FD297011BE06400144FF82309_m.jpg" },
   { img: "/public/images/15E330E0A0084AE7E06400144FF82309_m.jpg" },
   { img: "/public/images/15E3285A27044AEDE06400144FF82309_m.jpg" }
-];
+]
 </script>
 
 <template>
@@ -19,7 +19,7 @@ const banners = [
     <Swiper
       :modules="[Navigation]"
       :slides-per-view="3"
-      :space-between="10"
+      :space-between="16"
       :loop="true"
       :navigation="true"
       autoplay="false"
