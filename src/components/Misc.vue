@@ -68,11 +68,11 @@ const banners = [
 
 .swiper-container:hover :deep(.swiper-button-prev) {
   opacity: 1;
-  transform: translateX(-15px);
+  transform: translateX(-12px);
 }
 
 .swiper-container:hover :deep(.swiper-button-next) {
   opacity: 1;
-  transform: translateX(15px);
+  transform: translateX(12px);
 }
 </style>

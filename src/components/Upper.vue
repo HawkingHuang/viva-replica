@@ -22,10 +22,19 @@ const banners1 = [
   { img: "/public/images/E8C580515EF263F1E05400144FF82309_m.webp" },
   { img: "/public/images/E8C580515EF063F1E05400144FF82309_m.webp" }
 ]
+
+const banners2 = [
+  { img: "/public/images/2FF6FE6A3D26314EE06400144FF9CEC6.jpeg" },
+  { img: "/public/images/banner.jpg" },
+  { img: "/public/images/1475383744C53093E06400144FF82309.jpeg" },
+  { img: "/public/images/0E7BAE9339F83C14E06400144FF9CEC6.jpeg" },
+  { img: "/public/images/banner (1).jpg" },
+  { img: "/public/images/banner (2).jpg" }
+]
 </script>
 
 <template>
-  <div>
+  <div class="upper">
     <div class="h-[46px] bg-[#3f3c42]">
       <div class="container-xl flex justify-between items-center px-2 mx-auto">
         <div class="flex items-center">
@@ -75,7 +84,7 @@ const banners1 = [
       </div>
     </div>
 
-    <div class="relative container-xl py-12">
+    <div class="relative container-xl py-4">
       <Swiper
         :modules="[Navigation]"
         :slides-per-view="8"
@@ -92,10 +101,32 @@ const banners1 = [
         </SwiperSlide>
       </Swiper>
     </div>
+
+    <div class="relative container-xl py-4">
+      <Swiper
+        :modules="[Navigation]"
+        :slides-per-view="3"
+        :space-between="16"
+        :loop="true"
+        :navigation="true"
+        autoplay="false"
+        :grab-cursor="true"
+        class="swiper-container"
+        style="position: unset;"
+      >
+        <SwiperSlide v-for="(banner, index) in banners2" :key="index">
+          <img :src="banner.img" :alt="banner.alt" class="banner-image" />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.upper {
+  background-image: url('/public/images/background.png');
+}
+
 :deep(.swiper-button-prev),
 :deep(.swiper-button-next) {
   width: 30px;
@@ -129,11 +160,11 @@ const banners1 = [
 
 .swiper-container:hover :deep(.swiper-button-prev) {
   opacity: 1;
-  transform: translateX(-15px);
+  transform: translateX(-12px);
 }
 
 .swiper-container:hover :deep(.swiper-button-next) {
   opacity: 1;
-  transform: translateX(15px);
+  transform: translateX(12px);
 }
 </style>
