@@ -15,7 +15,7 @@ const banners = [
 </script>
 
 <template>
-  <div class="container-xl py-12">
+  <div class="relative container-xl py-12">
     <Swiper
       :modules="[Navigation]"
       :slides-per-view="3"
@@ -25,6 +25,7 @@ const banners = [
       autoplay="false"
       :grab-cursor="true"
       class="swiper-container"
+      style="position: unset;"
     >
       <SwiperSlide v-for="(banner, index) in banners" :key="index">
         <img :src="banner.img" :alt="banner.alt" class="banner-image" />
@@ -36,10 +37,10 @@ const banners = [
 <style scoped>
 :deep(.swiper-button-prev),
 :deep(.swiper-button-next) {
-  width: 36px;
-  height: 72px;
-  background: white !important;
-  border-radius: 36px;
+  width: 30px;
+  height: 60px;
+  background: #fff !important;
+  border-radius: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
@@ -67,11 +68,11 @@ const banners = [
 
 .swiper-container:hover :deep(.swiper-button-prev) {
   opacity: 1;
-  transform: translateX(-5px);
+  transform: translateX(-15px);
 }
 
 .swiper-container:hover :deep(.swiper-button-next) {
   opacity: 1;
-  transform: translateX(5px);
+  transform: translateX(15px);
 }
 </style>
