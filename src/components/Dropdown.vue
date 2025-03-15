@@ -146,57 +146,79 @@ const menuL = ref([
     <button @mouseenter="activeMenu = 'L'" class="h-full hover:bg-[#e0dde3]">活動專區</button>
     <div v-if="activeMenu === 'B'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuB" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuB" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'C'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuC" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuC" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'D'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuD" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuD" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'E'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuE" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuE" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'F'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuF" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuF" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'G'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuG" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuG" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'H'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuH" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuH" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'I'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuI" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuI" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'J'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuJ" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuJ" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'K'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuK" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuK" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-if="activeMenu === 'L'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuL" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3]">{{ item }}</div>
+        <div v-for="item in menuL" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+          {{ item }}
+        </div>
       </div>
     </div>
   </div>
