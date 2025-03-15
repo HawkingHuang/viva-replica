@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import Dropdown from './Dropdown.vue'
 const showTwoRows = ref(false)
 
 const toggleRows = () => {
@@ -51,5 +52,7 @@ const toggleRows = () => {
         </div>
       </div>
     </div>
+
+    <Dropdown />
   </div>
 </template>
