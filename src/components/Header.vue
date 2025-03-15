@@ -23,7 +23,7 @@ const toggleRows = () => {
       </div>
     </div>
 
-    <div class="bg-gray-100 border-b border-gray-200">
+    <div class="bg-gray-50 border-b border-gray-200">
       <div class="container-xl flex h-[54px] items-center">
         <div class="h-full flex flex-1 justify-start items-center gap-4">
           <div>全區最殺4折起</div>

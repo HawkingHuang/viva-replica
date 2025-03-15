@@ -1,6 +1,78 @@
 <script setup>
 import { ref } from 'vue'
+import { Swiper, SwiperSlide } from "swiper/vue"
+import "swiper/css"
+import "swiper/css/navigation"
+import { Navigation } from "swiper/modules"
+
 const activeMenu = ref('')
+
+const menuA = ref([
+  {
+    name: '聯馥食品專館',
+    img: '/public/images/C5DF6D117D7F00E9E05400144FF9CEC6.jpg',
+  },
+  {
+    name: '【勝崎生鮮】',
+    img: '/public/images/EDF5B2635E802429E05400144FF9CEC6.jpg',
+  },
+  {
+    name: '亞帝芬奇',
+    img: '/public/images/EDF5B2635CC22429E05400144FF9CEC6.jpg',
+  },
+  {
+    name: 'de Buyer 畢耶',
+    img: '/public/images/DF416DF3282E5107E05400144FF82309.jpg',
+  },
+  {
+    name: 'Sabre Paris',
+    img: '/public/images/DF3EE7E72F9E4406E05400144FF9CEC6.jpg',
+  },
+  {
+    name: 'M2nd珍稀皮革',
+    img: '/public/images/D04362687E5F62F1E05400144FF82309.jpg',
+  },
+  {
+    name: '日本HARIO',
+    img: '/public/images/C4D9ABC8A7271231E05400144FF9CEC6.jpg',
+  },
+  {
+    name: '台塑生醫館',
+    img: '/public/images/C5DF6D11790D00E9E05400144FF9CEC6.jpg',
+  },
+  {
+    name: '波西米亞人',
+    img: '/public/images/C6834CAF704164AAE05400144FF9CEC6.jpg',
+  },
+  {
+    name: '茶寶',
+    img: '/public/images/D548C8B385986466E05400144FF9CEC6.jpg',
+  },
+  {
+    name: '大侑食尚生活',
+    img: '/public/images/C4D9ABC8A6DD1231E05400144FF9CEC6.jpg',
+  },
+  {
+    name: '3M生活',
+    img: '/public/images/C5DF6CB624743708E05400144FF82309.jpg',
+  },
+  {
+    name: '好好生醫&盈翠絲',
+    img: '/public/images/118BADB7464C68E1E06400144FF82309.jpg',
+  },
+  {
+    name: '開運方程式',
+    img: '/public/images/C5DF6CB6381A3708E05400144FF82309.jpg',
+  },
+  {
+    name: 'AOTTO',
+    img: '/public/images/2DD65F7F224D2539E06400144FF82309.jpg',
+  },
+  {
+    name: '藏寓',
+    img: '/public/images/CC06B5DEBBD12A06E05400144FF9CEC6.jpg',
+  },
+])
 
 const menuB = ref([
   "TV熱銷快搜",
@@ -132,7 +204,7 @@ const menuL = ref([
 </script>
 <template>
   <div @mouseleave="activeMenu = ''" class="container-xl relative grid grid-cols-12 h-[60px] items-center px-0">
-    <button @mouseenter="activeMenu = ''" class="h-full hover:bg-[#e0dde3]">品牌旗艦館</button>
+    <button @mouseenter="activeMenu = 'A'" class="h-full hover:bg-[#e0dde3]">品牌旗艦館</button>
     <button @mouseenter="activeMenu = 'B'" class="h-full hover:bg-[#e0dde3]">品味生活</button>
     <button @mouseenter="activeMenu = 'C'" class="h-full hover:bg-[#e0dde3]">質感家電</button>
     <button @mouseenter="activeMenu = 'D'" class="h-full hover:bg-[#e0dde3]">時尚名品</button>
@@ -144,82 +216,149 @@ const menuL = ref([
     <button @mouseenter="activeMenu = 'J'" class="h-full hover:bg-[#e0dde3]">3C數位</button>
     <button @mouseenter="activeMenu = 'K'" class="h-full hover:bg-[#e0dde3]">車旅休閒</button>
     <button @mouseenter="activeMenu = 'L'" class="h-full hover:bg-[#e0dde3]">活動專區</button>
+    <div v-if="activeMenu === 'A'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
+      <Swiper
+        :modules="[Navigation]"
+        :slides-per-view="10"
+        :slides-per-group="8" 
+        :space-between="10"
+        :navigation="true"
+        autoplay="false"
+        :grab-cursor="true"
+        class="swiper-container bg-gray-50 p-4"
+        style="position: unset;"
+      >
+        <SwiperSlide v-for="(menu, index) in menuA" :key="index">
+          <div class="border bg-[#fff] shadow-sm">
+            <img :src="menu.img" class="banner-image" />
+            <p class="text-sm text-center pt-2 border-t border-slate-200 w-[98%] mx-auto">{{ menu.name }}</p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
     <div v-if="activeMenu === 'B'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuB" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuB" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'C'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuC" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuC" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'D'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuD" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuD" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'E'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuE" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuE" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'F'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuF" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuF" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'G'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuG" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuG" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'H'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuH" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuH" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'I'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuI" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuI" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'J'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuJ" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuJ" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'K'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuK" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuK" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
     <div v-if="activeMenu === 'L'" class="absolute top-full left-0 container-xl bg-[#e0dde3] p-2">
       <div class="grid grid-cols-10 justify-items-center bg-white p-4">
-        <div v-for="item in menuL" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center">
+        <div v-for="item in menuL" :key="item" class="w-[120px] text-center text-sm px-2 py-2 m-2 border cursor-pointer hover:bg-[#e0dde3] flex items-center justify-center transition-all duration-500">
           {{ item }}
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.upper {
+  background-image: url('/public/images/background.png');
+}
+
+:deep(.swiper-button-prev),
+:deep(.swiper-button-next) {
+  width: 30px;
+  height: 60px;
+  background: #fff !important;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 50;
+}
+
+:deep(.swiper-button-prev)::after,
+:deep(.swiper-button-next)::after {
+  font-size: 20px;
+  color: #333 !important;
+}
+
+:deep(.swiper-button-prev),
+.swiper-container:not(:hover) :deep(.swiper-button-prev) {
+  transform: translateX(30px);
+}
+
+:deep(.swiper-button-next),
+.swiper-container:not(:hover) :deep(.swiper-button-next) {
+  transform: translateX(-30px);
+}
+
+.swiper-container:hover :deep(.swiper-button-prev) {
+  opacity: 1;
+  transform: translateX(-20px);
+}
+
+.swiper-container:hover :deep(.swiper-button-next) {
+  opacity: 1;
+  transform: translateX(20px);
+}
+</style>
