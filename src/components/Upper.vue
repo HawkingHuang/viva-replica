@@ -35,20 +35,6 @@ const banners2 = [
 
 <template>
   <div class="upper">
-    <div class="h-[46px] bg-[#3f3c42]">
-      <div class="container-xl flex justify-between items-center px-2 mx-auto">
-        <div class="flex items-center">
-          <button class="h-[46px]"><img src="/public/images/viva-logo-white.png" class="h-[32px]"></button>
-          <button class="h-[46px] pl-6"><img src="/public/images/logo-right-gif.png" class="h-[46px]"></button>
-        </div>
-        <div class="flex items-center">
-          <div class="text-white p-2"><button><i class="bi bi-cart"></i> 購物車</button></div>
-          <div class="text-white p-2"><button><i class="bi bi-person"></i> 會員專區</button></div>
-          <div class="text-white p-2"><button><i class="bi bi-box-arrow-in-right"></i> 登入</button></div>
-        </div>
-      </div>
-    </div>
-
     <div class="container-xl grid grid-cols-8 py-4 gap-4">
       <div class="flex flex-col items-center gap-2">
         <img src="/public/images/F5E2973B615C3EECE05400144FF82309_m.webp" class="w-[132px] rounded-full">
