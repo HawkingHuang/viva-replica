@@ -24,9 +24,7 @@ import Footer from './components/Footer.vue'
 
 <style scoped>
 .main {
-  background: 
-    url('/images/background.png') no-repeat top,
-    url('/images/background.png') repeat-y center bottom;
+  background: url('/images/background_repeat.png');
   background-size: 100% auto, 100% auto;
 }
 </style>
