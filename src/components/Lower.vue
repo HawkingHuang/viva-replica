@@ -5,6 +5,59 @@ import { Navigation, Pagination } from "swiper/modules"
 import "swiper/css/navigation"
 import 'swiper/css/pagination'
 
+const top = [
+  {
+    img: "/images/1 (25).jpg",
+    title: "ROYAL DIAMOND石墨烯美型褲",
+    price: "2990"
+  },
+  {
+    img: "/images/1 (26).jpg",
+    title: "Nashihada極效紫草奇肌舒緩膏(15ml/盒)x6盒",
+    price: "1663"
+  },
+  {
+    img: "/images/1 (27).jpg",
+    title: "U-Link生命之花量子共振心經鍊",
+    price: "9900"
+  },
+  {
+    img: "/images/1 (28).jpg",
+    title: "奔馳醋酸銅遠紅外線醫療襪(6雙)",
+    price: "2970"
+  },
+  {
+    img: "/images/1 (29).jpg",
+    title: "穆拉德幅護成6盒(30粒/盒)×6盒",
+    price: "1888"
+  },
+  {
+    img: "/images/2.jpg",
+    title: "黃金週特惠! 諾得挪威85%rTG高濃度魚油(30粒/盒)×8盒",
+    price: "2980"
+  },
+  {
+    img: "/images/1 (30).jpg",
+    title: "Dr.Schaumann德國超能靈活霜(250g/盒)×4盒",
+    price: "2970"
+  },
+  {
+    img: "/images/1 (31).jpg",
+    title: "黃金週特惠! S.MARINE 時尚多功能後背包",
+    price: "1590"
+  },
+  {
+    img: "/images/1 (32).jpg",
+    title: "COACH 經典兩用水桶包VIP限定",
+    price: "8316"
+  },
+  {
+    img: "/images/1 (33).jpg",
+    title: "米特克高輕抗藍光遮光大眼鏡x2",
+    price: "990"
+  }
+]
+
 const recommended = [
   [
     {
@@ -268,6 +321,33 @@ const newItems = [
 
 <template>
   <div class="lower">
+    <div class="relative container-xl py-4">
+      <h5 class="!font-bold py-2 !text-[#e60012]"><i class="bi bi-star-fill"></i> 人氣熱銷</h5>
+      <Swiper
+        :modules="[Navigation]"
+        :slides-per-view="5"
+        :slides-per-group="5" 
+        :space-between="15"
+        :navigation="true"
+        autoplay="false"
+        :grab-cursor="true"
+        class="swiper-container"
+        style="position: unset;"
+      >
+        <SwiperSlide v-for="(item, index) in top" :key="index">
+          <div class="border bg-[#fff] p-2 shadow-sm flex flex-col h-[340px]">
+            <img :src="item.img" class="w-[228px] mx-auto" />
+            <div class="flex-grow">
+              <p class="pt-1 line-clamp-2 h-[48px] overflow-hidden leading-snug">
+                {{ item.title }}
+              </p>
+            </div>
+            <p class="text-red-500">${{ item.price }}</p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+
     <div class="relative container-xl py-4">
       <h6 class="!font-bold py-2"><i class="bi bi-hand-thumbs-up"></i> 熱銷推薦</h6>
       <Swiper
