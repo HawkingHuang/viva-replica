@@ -336,7 +336,9 @@ const newItems = [
       >
         <SwiperSlide v-for="(item, index) in top" :key="index">
           <div class="border bg-[#fff] p-2 shadow-sm flex flex-col h-[340px]">
-            <img :src="item.img" class="w-[228px] mx-auto" />
+            <div class="w-[228px] mx-auto overflow-hidden">
+              <img :src="item.img" class="w-full hover:scale-110 duration-500" />
+            </div>
             <div class="flex-grow">
               <p class="pt-1 line-clamp-2 h-[48px] overflow-hidden leading-snug">
                 {{ item.title }}
@@ -364,7 +366,9 @@ const newItems = [
       >
         <SwiperSlide v-for="(item, index) in recommended" :key="index">
           <div class="border bg-[#fff] p-2 shadow-sm flex flex-col h-[340px]">
-            <img :src="item[0].img" class="w-[228px] mx-auto" />
+            <div class="w-[228px] mx-auto overflow-hidden">
+              <img :src="item[0].img" class="w-full hover:scale-110 duration-500" />
+            </div>
             <div class="flex-grow">
               <p class="pt-1 line-clamp-2 h-[48px] overflow-hidden leading-snug">
                 {{ item[0].title }}
@@ -373,7 +377,9 @@ const newItems = [
             <p class="text-red-500">${{ item[0].price }}</p>
           </div>
           <div class="border bg-[#fff] p-2 shadow-sm flex flex-col h-[340px] mt-3">
-            <img :src="item[1].img" class="w-[228px] mx-auto" />
+            <div class="w-[228px] mx-auto overflow-hidden">
+              <img :src="item[1].img" class="w-full hover:scale-110 duration-500" />
+            </div>
             <div class="flex-grow">
               <p class="pt-1 line-clamp-2 h-[48px] overflow-hidden leading-snug">
                 {{ item[1].title }}
@@ -401,7 +407,9 @@ const newItems = [
       >
         <SwiperSlide v-for="(item, index) in newItems" :key="index">
           <div class="border bg-[#fff] p-2 shadow-sm flex flex-col h-[340px]">
-            <img :src="item[0].img" class="w-[228px] mx-auto" />
+            <div class="w-[228px] mx-auto overflow-hidden">
+              <img :src="item[0].img" class="w-full hover:scale-110 duration-500" />
+            </div>
             <div class="flex-grow">
               <p class="pt-1 line-clamp-2 h-[48px] overflow-hidden leading-snug">
                 {{ item[0].title }}
@@ -410,7 +418,9 @@ const newItems = [
             <p class="text-red-500">${{ item[0].price }}</p>
           </div>
           <div class="border bg-[#fff] p-2 shadow-sm flex flex-col h-[340px] mt-3">
-            <img :src="item[1].img" class="w-[228px] mx-auto" />
+            <div class="w-[228px] mx-auto overflow-hidden">
+              <img :src="item[1].img" class="w-full hover:scale-110 duration-500" />
+            </div>
             <div class="flex-grow">
               <p class="pt-1 line-clamp-2 h-[48px] overflow-hidden leading-snug">
                 {{ item[1].title }}
