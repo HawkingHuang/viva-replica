@@ -58,7 +58,7 @@ const banners2 = [
         :navigation="true"
         :pagination="{ clickable: true }"
         :autoplay="{ delay: 5000, disableOnInteraction: false }"
-        :speed="2500"
+        :speed="2000"
         class="swiper-container main"
       >
         <SwiperSlide v-for="(slide, index) in mainBanners" :key="index">
@@ -136,6 +136,51 @@ const banners2 = [
           <img :src="banner.img" :alt="banner.alt" class="banner-image" />
         </SwiperSlide>
       </Swiper>
+    </div>
+
+    <div class="container-xl py-4 grid grid-cols-2 gap-2">
+      <div class="shadow-sm cursor-pointer bg-white">
+        <div class="relative bg-gradient-to-r from-[#800909] to-[#1e4786] text-white p-2">
+          <div class="absolute inset-0 bg-[url('/images/light-sketch.png')] bg-center bg-cover"></div>
+          <i class="bi bi-tv"></i> 電視購物
+        </div>
+        <div class="grid grid-cols-2 gap-2 p-2">
+          <div>
+            <div class="flex gap-0.5 relative">
+              <div><img src="/images/2025-03-16_194907.png" class="w-[104px] border-2 border-gray-50"></div>
+              <div class="">
+                <div class="text-[#800909] inline-block border !border-[#800909] px-2 py-1">美好一台 現正播出</div>
+                <p>尚品MYEZ綻耀GIA一克拉黃彩鑽</p>
+                <p class="absolute bottom-0 right-0 !mb-0 text-red-500">$86,600</p>
+              </div>
+            </div>
+            <div class="bg-[#800909] inline-block px-3 rounded-full text-white mt-1">一台節目表</div>
+          </div>
+          <div>
+            <div class="flex gap-0.5 relative">
+              <div><img src="/images/2025-03-16_194319.png" class="w-[104px] border-2 border-gray-50"></div>
+              <div class="">
+                <div class="text-[#1e4786] inline-block border !border-[#1e4786] px-2 py-1">美好二台 現正播出</div>
+                <p>尚品MYEZ綻耀GIA一克拉黃彩鑽</p>
+                <p class="absolute bottom-0 right-0 !mb-0 text-red-500">$2,980</p>
+              </div>
+            </div>
+            <div class="bg-[#1e4786] inline-block px-3 rounded-full text-white mt-1">二台節目表</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="shadow-sm cursor-pointer hover:scale-[1.02] duration-500">
+        <div class="relative bg-gradient-to-r from-[#513b2e] to-[#6f4933] text-white p-2">
+          <div class="absolute inset-0 bg-[url('/images/light-sketch.png')] bg-center bg-cover"></div>
+          <i class="bi bi-credit-card-2-back"></i> 刷卡優惠
+        </div>
+        <img src="/images/28FA9DCF48153A21E06400144FF82309_m.jpg">
+      </div>
+    </div>
+
+    <div class="container-xl py-4 cursor-pointer">
+      <img src="/images/16E323AC98FA4ACAE06400144FF9CEC6_m.jpg" class="mx-auto max-w-[975px] hover:scale-105 duration-500">
     </div>
   </div>
 </template>
