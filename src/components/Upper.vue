@@ -51,7 +51,7 @@ const banners2 = [
     <div class="relative">
       <Swiper
         :modules="[Navigation, Pagination, Autoplay]"
-        :slides-per-view="1.8"
+        :slides-per-view="1"
         :space-between="0"
         :centeredSlides="true"
         :loop="true"
@@ -60,6 +60,11 @@ const banners2 = [
         :autoplay="{ delay: 5000, disableOnInteraction: false }"
         :speed="2000"
         class="swiper-container main"
+        :breakpoints="{
+          1280: {
+            slidesPerView: 1.8,
+          }
+        }"
       >
         <SwiperSlide v-for="(slide, index) in mainBanners" :key="index">
           <img :src="slide.img" class="slide-image" />
@@ -67,7 +72,7 @@ const banners2 = [
       </Swiper>
     </div>
 
-    <div class="container-xl grid grid-cols-8 py-4 gap-4">
+    <div class="container-xl grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 py-4 gap-4">
       <div class="flex flex-col items-center gap-2">
         <img src="/images/F5E2973B615C3EECE05400144FF82309_m.webp" class="w-[132px] rounded-full">
         旗艦館總覽
@@ -105,14 +110,32 @@ const banners2 = [
     <div class="relative container-xl py-4">
       <Swiper
         :modules="[Navigation]"
-        :slides-per-view="8"
-        :slides-per-group="8" 
+        :slides-per-view="2"
+        :slides-per-group="2" 
         :space-between="10"
         :navigation="true"
         autoplay="false"
         :grab-cursor="true"
         class="swiper-container"
         style="position: unset;"
+        :breakpoints="{
+          540: {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+          },
+          768: {
+            slidesPerView: 4,
+            slidesPerGroup: 4
+          },
+          1024: {
+            slidesPerView: 6,
+            slidesPerGroup: 6
+          },
+          1536: {
+            slidesPerView: 8,
+            slidesPerGroup: 8
+          }
+        }"
       >
         <SwiperSlide v-for="(banner, index) in banners1" :key="index">
           <img :src="banner.img" :alt="banner.alt" class="banner-image" />
@@ -123,7 +146,7 @@ const banners2 = [
     <div class="relative container-xl py-4">
       <Swiper
         :modules="[Navigation]"
-        :slides-per-view="3"
+        :slides-per-view="1"
         :space-between="16"
         :loop="true"
         :navigation="true"
@@ -131,6 +154,14 @@ const banners2 = [
         :grab-cursor="true"
         class="swiper-container"
         style="position: unset;"
+        :breakpoints="{
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          }
+        }"
       >
         <SwiperSlide v-for="(banner, index) in banners2" :key="index">
           <img :src="banner.img" :alt="banner.alt" class="banner-image" />
@@ -138,13 +169,13 @@ const banners2 = [
       </Swiper>
     </div>
 
-    <div class="container-xl py-4 grid grid-cols-2 gap-2">
+    <div class="container-xl py-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
       <div class="shadow-sm cursor-pointer bg-white">
         <div class="relative bg-gradient-to-r from-[#800909] to-[#1e4786] text-white p-2">
           <div class="absolute inset-0 bg-[url('/images/light-sketch.png')] bg-center bg-cover"></div>
           <i class="bi bi-tv"></i> 電視購物
         </div>
-        <div class="grid grid-cols-2 gap-2 p-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-2">
           <div>
             <div class="flex gap-0.5 relative">
               <div><img src="/images/2025-03-16_194907.png" class="w-[104px] border-2 border-gray-50"></div>
@@ -180,7 +211,7 @@ const banners2 = [
     </div>
 
     <div class="container-xl py-4 cursor-pointer">
-      <img src="/images/16E323AC98FA4ACAE06400144FF9CEC6_m.jpg" class="mx-auto max-w-[975px] hover:scale-105 duration-500">
+      <img src="/images/16E323AC98FA4ACAE06400144FF9CEC6_m.jpg" class="mx-auto w-full max-w-[975px] hover:scale-105 duration-500">
     </div>
   </div>
 </template>
@@ -282,5 +313,14 @@ const banners2 = [
   background-color: #fff;
   opacity: 1;
   border-radius: 9999px;
+}
+
+@media (max-width: 1024px) {
+  :deep(.main .swiper-button-prev),
+  :deep(.main .swiper-button-next),
+  :deep(.swiper-button-prev),
+  :deep(.swiper-button-next) {
+    display: none !important;
+  }
 }
 </style>
