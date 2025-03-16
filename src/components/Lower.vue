@@ -325,14 +325,32 @@ const newItems = [
       <h5 class="!font-bold py-2 !text-[#e60012]"><i class="bi bi-star-fill"></i> 人氣熱銷</h5>
       <Swiper
         :modules="[Navigation]"
-        :slides-per-view="5"
-        :slides-per-group="5" 
+        :slides-per-view="1"
+        :slides-per-group="1" 
         :space-between="15"
         :navigation="true"
         autoplay="false"
         :grab-cursor="true"
         class="swiper-container"
         style="position: unset;"
+        :breakpoints="{
+          640: {
+            slidesPerView: 2,
+            slidesPerGroup: 2
+          },
+          840: {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+          },
+          1200: {
+            slidesPerView: 4,
+            slidesPerGroup: 4
+          },
+          1536: {
+            slidesPerView: 5,
+            slidesPerGroup: 5
+          }
+        }"
       >
         <SwiperSlide v-for="(item, index) in top" :key="index">
           <div class="border bg-[#fff] p-2 shadow-sm flex flex-col h-[340px]">
@@ -354,8 +372,8 @@ const newItems = [
       <h6 class="!font-bold py-2"><i class="bi bi-hand-thumbs-up"></i> 熱銷推薦</h6>
       <Swiper
         :modules="[Navigation, Pagination]"
-        :slides-per-view="5"
-        :slides-per-group="5" 
+        :slides-per-view="1"
+        :slides-per-group="1" 
         :space-between="15"
         :navigation="true"
         :pagination="{ clickable: true }"
@@ -363,6 +381,24 @@ const newItems = [
         :grab-cursor="true"
         class="swiper-container"
         style="position: unset;"
+        :breakpoints="{
+          640: {
+            slidesPerView: 2,
+            slidesPerGroup: 2
+          },
+          840: {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+          },
+          1200: {
+            slidesPerView: 4,
+            slidesPerGroup: 4
+          },
+          1536: {
+            slidesPerView: 5,
+            slidesPerGroup: 5
+          }
+        }"
       >
         <SwiperSlide v-for="(item, index) in recommended" :key="index">
           <div class="border bg-[#fff] p-2 shadow-sm flex flex-col h-[340px]">
@@ -395,8 +431,8 @@ const newItems = [
       <h6 class="!font-bold py-2"><i class="bi bi-box"></i> 本週新品</h6>
       <Swiper
         :modules="[Navigation, Pagination]"
-        :slides-per-view="5"
-        :slides-per-group="5" 
+        :slides-per-view="1"
+        :slides-per-group="1" 
         :space-between="15"
         :navigation="true"
         :pagination="{ clickable: true }"
@@ -404,6 +440,24 @@ const newItems = [
         :grab-cursor="true"
         class="swiper-container"
         style="position: unset;"
+        :breakpoints="{
+          640: {
+            slidesPerView: 2,
+            slidesPerGroup: 2
+          },
+          840: {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+          },
+          1200: {
+            slidesPerView: 4,
+            slidesPerGroup: 4
+          },
+          1536: {
+            slidesPerView: 5,
+            slidesPerGroup: 5
+          }
+        }"
       >
         <SwiperSlide v-for="(item, index) in newItems" :key="index">
           <div class="border bg-[#fff] p-2 shadow-sm flex flex-col h-[340px]">

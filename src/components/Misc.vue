@@ -18,7 +18,7 @@ const banners = [
   <div class="relative container-xl py-12">
     <Swiper
       :modules="[Navigation]"
-      :slides-per-view="3"
+      :slides-per-view="1"
       :space-between="16"
       :loop="true"
       :navigation="true"
@@ -26,6 +26,14 @@ const banners = [
       :grab-cursor="true"
       class="swiper-container"
       style="position: unset;"
+      :breakpoints="{
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      }"
     >
       <SwiperSlide v-for="(banner, index) in banners" :key="index">
         <img :src="banner.img" :alt="banner.alt" class="banner-image" />
