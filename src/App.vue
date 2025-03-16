@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Header from './components/Header.vue'
 import Upper from './components/Upper.vue'
 import Lower from './components/Lower.vue'
