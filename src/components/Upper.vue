@@ -109,10 +109,6 @@ const banners2 = [
 </template>
 
 <style scoped>
-.upper {
-  background-image: url('/public/images/background.png');
-}
-
 :deep(.swiper-button-prev),
 :deep(.swiper-button-next) {
   width: 30px;

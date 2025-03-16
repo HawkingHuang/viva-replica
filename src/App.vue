@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from './components/Header.vue'
 import Upper from './components/Upper.vue'
+import Lower from './components/Lower.vue'
 import Misc from './components/Misc.vue'
 import Footer from './components/Footer.vue'
 </script>
@@ -10,8 +11,9 @@ import Footer from './components/Footer.vue'
     <Header />
   </header>
 
-  <main>
+  <main class="main">
     <Upper />
+    <Lower />
     <Misc />
   </main>
 
@@ -21,4 +23,10 @@ import Footer from './components/Footer.vue'
 </template>
 
 <style scoped>
+.main {
+  background: 
+    url('/public/images/background.png') no-repeat top,
+    url('/public/images/background.png') repeat-y center bottom;
+  background-size: 100% auto, 100% auto;
+}
 </style>
