@@ -555,4 +555,11 @@ const newItems = [
   opacity: 1;
   border-radius: 9999px;
 }
+
+@media (max-width: 1024px) {
+  :deep(.swiper-button-prev),
+  :deep(.swiper-button-next) {
+    display: none !important;
+  }
+}
 </style>
