@@ -236,11 +236,11 @@ const banners2 = [
 }
 
 :deep(.main .swiper-button-prev) {
-  left: 16%;
+  left: 21.5%;
 }
 
 :deep(.main .swiper-button-next) {
-  right: 16%;
+  right: 21.5%;
 }
 
 :deep(.main:hover .swiper-button-prev),
