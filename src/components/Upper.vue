@@ -1,8 +1,21 @@
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue"
 import "swiper/css"
+import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import "swiper/css/navigation"
-import { Navigation } from "swiper/modules"
+import 'swiper/css/pagination'
+
+const mainBanners = [
+  { img: "/images/2EF485E1FFF51213E06400144FF9CEC6.jpg" },
+  { img: "/images/2A3D068F67313409E06400144FF9CEC6.jpg" },
+  { img: "/images/2EF4BD6781A924F7E06400144FF9CEC6.jpg" },
+  { img: "/images/2DD9CB6A6C5F6986E06400144FF82309.jpg" },
+  { img: "/images/2F6E2AFD66373136E06400144FF82309.jpg" },
+  { img: "/images/E8C55FAAC09966AFE05400144FF9CEC6.jpg" },
+  { img: "/images/2F6E2AFD66383136E06400144FF82309.jpg" },
+  { img: "/images/151B603E5AD80D2DE06400144FF82309.jpg" },
+  { img: "/images/2F6E2AFD66393136E06400144FF82309.jpg" }
+]
 
 const banners1 = [
   { img: "/public/images/ED0246E39278668AE05400144FF82309_m.webp" },
@@ -35,6 +48,24 @@ const banners2 = [
 
 <template>
   <div class="upper">
+    <div class="relative">
+      <Swiper
+        :modules="[Navigation, Pagination, Autoplay]"
+        :slides-per-view="1.5"
+        :space-between="0"
+        :centeredSlides="true"
+        :loop="true"
+        :navigation="true"
+        :pagination="{ clickable: true }"
+        :autoplay="{ delay: 3000, disableOnInteraction: false }"
+        class="swiper-container main"
+      >
+        <SwiperSlide v-for="(slide, index) in mainBanners" :key="index">
+          <img :src="slide.img" class="slide-image" />
+        </SwiperSlide>
+      </Swiper>
+    </div>
+
     <div class="container-xl grid grid-cols-8 py-4 gap-4">
       <div class="flex flex-col items-center gap-2">
         <img src="/public/images/F5E2973B615C3EECE05400144FF82309_m.webp" class="w-[132px] rounded-full">
@@ -148,5 +179,30 @@ const banners2 = [
 .swiper-container:hover :deep(.swiper-button-next) {
   opacity: 1;
   transform: translateX(12px);
+}
+
+:deep(.swiper-pagination) {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+:deep(.swiper-pagination-bullet) {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  opacity: 0.5;
+  border-radius: 9999px;
+  transition: all 0.3s ease-in-out;
+}
+
+:deep(.swiper-pagination-bullet-active) {
+  width: 18px;
+  height: 6px;
+  background-color: #fff;
+  opacity: 1;
+  border-radius: 9999px;
 }
 </style>

@@ -491,5 +491,4 @@ const newItems = [
   opacity: 1;
   border-radius: 9999px;
 }
-
 </style>
