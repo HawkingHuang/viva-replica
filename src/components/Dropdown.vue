@@ -10,67 +10,67 @@ const activeMenu = ref('')
 const menuA = ref([
   {
     name: '聯馥食品專館',
-    img: '/public/images/C5DF6D117D7F00E9E05400144FF9CEC6.jpg',
+    img: '/images/C5DF6D117D7F00E9E05400144FF9CEC6.jpg',
   },
   {
     name: '【勝崎生鮮】',
-    img: '/public/images/EDF5B2635E802429E05400144FF9CEC6.jpg',
+    img: '/images/EDF5B2635E802429E05400144FF9CEC6.jpg',
   },
   {
     name: '亞帝芬奇',
-    img: '/public/images/EDF5B2635CC22429E05400144FF9CEC6.jpg',
+    img: '/images/EDF5B2635CC22429E05400144FF9CEC6.jpg',
   },
   {
     name: 'de Buyer 畢耶',
-    img: '/public/images/DF416DF3282E5107E05400144FF82309.jpg',
+    img: '/images/DF416DF3282E5107E05400144FF82309.jpg',
   },
   {
     name: 'Sabre Paris',
-    img: '/public/images/DF3EE7E72F9E4406E05400144FF9CEC6.jpg',
+    img: '/images/DF3EE7E72F9E4406E05400144FF9CEC6.jpg',
   },
   {
     name: 'M2nd珍稀皮革',
-    img: '/public/images/D04362687E5F62F1E05400144FF82309.jpg',
+    img: '/images/D04362687E5F62F1E05400144FF82309.jpg',
   },
   {
     name: '日本HARIO',
-    img: '/public/images/C4D9ABC8A7271231E05400144FF9CEC6.jpg',
+    img: '/images/C4D9ABC8A7271231E05400144FF9CEC6.jpg',
   },
   {
     name: '台塑生醫館',
-    img: '/public/images/C5DF6D11790D00E9E05400144FF9CEC6.jpg',
+    img: '/images/C5DF6D11790D00E9E05400144FF9CEC6.jpg',
   },
   {
     name: '波西米亞人',
-    img: '/public/images/C6834CAF704164AAE05400144FF9CEC6.jpg',
+    img: '/images/C6834CAF704164AAE05400144FF9CEC6.jpg',
   },
   {
     name: '茶寶',
-    img: '/public/images/D548C8B385986466E05400144FF9CEC6.jpg',
+    img: '/images/D548C8B385986466E05400144FF9CEC6.jpg',
   },
   {
     name: '大侑食尚生活',
-    img: '/public/images/C4D9ABC8A6DD1231E05400144FF9CEC6.jpg',
+    img: '/images/C4D9ABC8A6DD1231E05400144FF9CEC6.jpg',
   },
   {
     name: '3M生活',
-    img: '/public/images/C5DF6CB624743708E05400144FF82309.jpg',
+    img: '/images/C5DF6CB624743708E05400144FF82309.jpg',
   },
   {
     name: '好好生醫&盈翠絲',
-    img: '/public/images/118BADB7464C68E1E06400144FF82309.jpg',
+    img: '/images/118BADB7464C68E1E06400144FF82309.jpg',
   },
   {
     name: '開運方程式',
-    img: '/public/images/C5DF6CB6381A3708E05400144FF82309.jpg',
+    img: '/images/C5DF6CB6381A3708E05400144FF82309.jpg',
   },
   {
     name: 'AOTTO',
-    img: '/public/images/2DD65F7F224D2539E06400144FF82309.jpg',
+    img: '/images/2DD65F7F224D2539E06400144FF82309.jpg',
   },
   {
     name: '藏寓',
-    img: '/public/images/CC06B5DEBBD12A06E05400144FF9CEC6.jpg',
+    img: '/images/CC06B5DEBBD12A06E05400144FF9CEC6.jpg',
   },
 ])
 
@@ -318,7 +318,7 @@ const menuL = ref([
 
 <style scoped>
 .upper {
-  background-image: url('/public/images/background.png');
+  background-image: url('/images/background.png');
 }
 
 :deep(.swiper-button-prev),

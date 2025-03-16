@@ -5,12 +5,12 @@ import "swiper/css/navigation"
 import { Navigation } from "swiper/modules"
 
 const banners = [
-  { img: "/public/images/2FFA73E5EC845DB2E06400144FF9CEC6_m.jpg" },
-  { img: "/public/images/2DC7EE226E2237ADE06400144FF9CEC6_m.jpg" },
-  { img: "/public/images/2D9C7F8320E81105E06400144FF9CEC6_m.jpg" },
-  { img: "/public/images/2AC8988FD297011BE06400144FF82309_m.jpg" },
-  { img: "/public/images/15E330E0A0084AE7E06400144FF82309_m.jpg" },
-  { img: "/public/images/15E3285A27044AEDE06400144FF82309_m.jpg" }
+  { img: "/images/2FFA73E5EC845DB2E06400144FF9CEC6_m.jpg" },
+  { img: "/images/2DC7EE226E2237ADE06400144FF9CEC6_m.jpg" },
+  { img: "/images/2D9C7F8320E81105E06400144FF9CEC6_m.jpg" },
+  { img: "/images/2AC8988FD297011BE06400144FF82309_m.jpg" },
+  { img: "/images/15E330E0A0084AE7E06400144FF82309_m.jpg" },
+  { img: "/images/15E3285A27044AEDE06400144FF82309_m.jpg" }
 ]
 </script>
 
