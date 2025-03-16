@@ -203,7 +203,7 @@ const menuL = ref([
 ])
 </script>
 <template>
-  <div @mouseleave="activeMenu = ''" class="container-xl relative grid grid-cols-12 h-[60px] items-center px-0">
+  <div @mouseleave="activeMenu = ''" class="container-xl relative grid grid-cols-12 h-[60px] items-center px-0 z-50">
     <button @mouseenter="activeMenu = 'A'" class="h-full hover:bg-[#e0dde3]">品牌旗艦館</button>
     <button @mouseenter="activeMenu = 'B'" class="h-full hover:bg-[#e0dde3]">品味生活</button>
     <button @mouseenter="activeMenu = 'C'" class="h-full hover:bg-[#e0dde3]">質感家電</button>

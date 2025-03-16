@@ -51,13 +51,14 @@ const banners2 = [
     <div class="relative">
       <Swiper
         :modules="[Navigation, Pagination, Autoplay]"
-        :slides-per-view="1.5"
+        :slides-per-view="1.8"
         :space-between="0"
         :centeredSlides="true"
         :loop="true"
         :navigation="true"
         :pagination="{ clickable: true }"
-        :autoplay="{ delay: 3000, disableOnInteraction: false }"
+        :autoplay="{ delay: 5000, disableOnInteraction: false }"
+        :speed="2500"
         class="swiper-container main"
       >
         <SwiperSlide v-for="(slide, index) in mainBanners" :key="index">
@@ -140,6 +141,38 @@ const banners2 = [
 </template>
 
 <style scoped>
+:deep(.main .swiper-button-prev),
+:deep(.main .swiper-button-next) {
+  width: 50px;
+  height: 50px;
+  background: #fff !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 50;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+:deep(.main .swiper-button-prev) {
+  left: 16%;
+}
+
+:deep(.main .swiper-button-next) {
+  right: 16%;
+}
+
+:deep(.main:hover .swiper-button-prev),
+:deep(.main:hover .swiper-button-next) {
+  opacity: 1;
+}
+
+
 :deep(.swiper-button-prev),
 :deep(.swiper-button-next) {
   width: 30px;
