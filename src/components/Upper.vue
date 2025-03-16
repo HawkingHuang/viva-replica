@@ -179,7 +179,7 @@ const banners2 = [
           <div>
             <div class="flex gap-0.5 relative">
               <div><img src="/images/2025-03-16_194907.png" class="w-[104px] border-2 border-gray-50"></div>
-              <div class="">
+              <div class="p-0.5">
                 <div class="text-[#800909] inline-block border !border-[#800909] px-2 py-1">美好一台 現正播出</div>
                 <p>尚品MYEZ綻耀GIA一克拉黃彩鑽</p>
                 <p class="absolute bottom-0 right-0 !mb-0 text-red-500">$86,600</p>
@@ -190,7 +190,7 @@ const banners2 = [
           <div>
             <div class="flex gap-0.5 relative">
               <div><img src="/images/2025-03-16_194319.png" class="w-[104px] border-2 border-gray-50"></div>
-              <div class="">
+              <div class="p-0.5">
                 <div class="text-[#1e4786] inline-block border !border-[#1e4786] px-2 py-1">美好二台 現正播出</div>
                 <p>尚品MYEZ綻耀GIA一克拉黃彩鑽</p>
                 <p class="absolute bottom-0 right-0 !mb-0 text-red-500">$2,980</p>
