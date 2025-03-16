@@ -7,7 +7,7 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <header>
+  <header class="sticky top-0 z-[1000] bg-white">
     <Header />
   </header>
 
