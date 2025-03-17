@@ -25,7 +25,7 @@ const scrollToTop = () => {
     <Footer />
   </footer>
 
-  <div class="fixed bottom-[10vh] 2xl:bottom-[45vh] right-4 z-[1500]">
+  <div class="fixed bottom-[10vh] 2xl:bottom-[45vh] right-4 z-40">
     <div class="relative">
       <img src="/images/agent-avatar.5cdde85.png" class="w-[82px] rounded-full">
       <p class="bg-[#3f3c42] text-white inline-block px-2 py-1 !mb-0 rounded-full absolute -bottom-4 right-4">客服</p>
