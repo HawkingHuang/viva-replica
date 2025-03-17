@@ -4,6 +4,10 @@ import Upper from './components/Upper.vue'
 import Lower from './components/Lower.vue'
 import Misc from './components/Misc.vue'
 import Footer from './components/Footer.vue'
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" })
+}
 </script>
 
 <template>
@@ -21,7 +25,7 @@ import Footer from './components/Footer.vue'
     <Footer />
   </footer>
 
-  <div class="hidden 2xl:block fixed bottom-[45vh] right-4 z-[1500]">
+  <div class="fixed bottom-[10vh] 2xl:bottom-[45vh] right-4 z-[1500]">
     <div class="relative">
       <img src="/images/agent-avatar.5cdde85.png" class="w-[82px] rounded-full">
       <p class="bg-[#3f3c42] text-white inline-block px-2 py-1 !mb-0 rounded-full absolute -bottom-4 right-4">客服</p>
@@ -45,7 +49,7 @@ import Footer from './components/Footer.vue'
         <i class="bi bi-person"></i>
         <p>會員專區</p>
       </button>
-      <button class="flex flex-col items-center">
+      <button class="flex flex-col items-center" @click="scrollToTop">
         <i class="bi bi-chevron-up"></i>
         <p>Top</p>
       </button>

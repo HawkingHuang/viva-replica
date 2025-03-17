@@ -25,6 +25,7 @@ const toggleRows = () => {
         <div class="flex 2xl:hidden items-center gap-4">
           <div class="text-white"><button><i class="bi bi-cart"></i></button></div>
           <div class="text-white"><button><i class="bi bi-search"></i></button></div>
+          <div class="text-white"><button data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i class="bi bi-list"></i></button></div>
         </div>
       </div>
     </div>
@@ -61,10 +62,24 @@ const toggleRows = () => {
 
     <Dropdown />
 
-    <div class="2xl:hidden fixed bottom-0 left-0 w-full bg-[#3f3c42] text-white z-50 h-[40px]">
-      <div class="grid grid-cols-2 !items-center h-full">
-        <button><i class="bi bi-person"></i> 會員專區</button>
-        <button data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i class="bi bi-list"></i> 選單</button>
+    <div class="2xl:hidden fixed bottom-0 left-0 w-full bg-[#3f3c42] text-white z-50 h-[50px]">
+      <div class="grid grid-cols-4 !items-center h-full">
+        <button class="flex flex-col items-center">
+          <i class="bi bi-clock-history"></i>
+          <p>瀏覽紀錄</p>
+        </button>
+        <button class="flex flex-col items-center">
+          <i class="bi bi-credit-card-2-back"></i>
+          <p>刷卡優惠</p>
+        </button>
+        <button class="flex flex-col items-center">
+          <i class="bi bi-file-text"></i>
+          <p>訂單查詢</p>
+        </button>
+        <button class="flex flex-col items-center">
+          <i class="bi bi-person"></i>
+          <p>會員專區</p>
+        </button>
       </div>
     </div>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
