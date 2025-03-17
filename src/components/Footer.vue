@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-[#5c5365] py-3 lg:hidden">
+    <div class="bg-[#5c5365] px-3 pt-4 pb-20 sm:pb-16 2xl:hidden">
       <div class="container-xl">
         <div class="text-white py-1">
           <div>24H免費服務專線：0809-053-888</div>
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-[#5c5365] py-3 hidden lg:block">
+    <div class="bg-[#5c5365] py-3 hidden 2xl:block">
       <div class="container-xl">
         <div class="flex justify-center gap-2 text-white py-1">
           <div>24H免費服務專線：0809-053-888</div>
