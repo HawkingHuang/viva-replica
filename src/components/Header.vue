@@ -17,20 +17,20 @@ const toggleRows = () => {
           <button class="h-[46px]"><img src="/images/viva-logo-white.png" class="h-[32px]"></button>
           <button class="h-[46px] pl-6"><img src="/images/logo-right-gif.png" class="h-[46px]"></button>
         </div>
-        <div class="hidden 2xl:flex items-center gap-4">
+        <nav class="hidden 2xl:flex items-center gap-4">
           <div class="text-white p-2"><button><i class="bi bi-cart"></i> 購物車</button></div>
           <div class="text-white p-2"><button><i class="bi bi-person"></i> 會員專區</button></div>
           <div class="text-white p-2"><button><i class="bi bi-box-arrow-in-right"></i> 登入</button></div>
-        </div>
-        <div class="flex 2xl:hidden items-center gap-4">
+        </nav>
+        <nav class="flex 2xl:hidden items-center gap-4">
           <div class="text-white"><button><i class="bi bi-cart"></i></button></div>
           <div class="text-white"><button><i class="bi bi-search"></i></button></div>
           <div class="text-white"><button data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i class="bi bi-list"></i></button></div>
-        </div>
+        </nav>
       </div>
     </div>
 
-    <div class="bg-gray-50 border-b border-gray-200 hidden 2xl:block">
+    <nav class="bg-gray-50 border-b border-gray-200 hidden 2xl:block">
       <div class="container-xl flex h-[54px] items-center">
         <div class="h-full flex flex-1 justify-start items-center gap-4">
           <div>全區最殺4折起</div>
@@ -58,11 +58,11 @@ const toggleRows = () => {
           <div>德恩奈買二送二</div>
         </div>
       </div>
-    </div>
+    </nav>
 
     <Dropdown />
 
-    <div class="2xl:hidden fixed bottom-0 left-0 w-full bg-[#3f3c42] text-white z-50 h-[50px]">
+    <nav class="2xl:hidden fixed bottom-0 left-0 w-full bg-[#3f3c42] text-white z-50 h-[50px]">
       <div class="grid grid-cols-4 !items-center h-full">
         <button class="flex flex-col items-center">
           <i class="bi bi-clock-history"></i>
@@ -81,8 +81,8 @@ const toggleRows = () => {
           <p>會員專區</p>
         </button>
       </div>
-    </div>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+    </nav>
+    <nav class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
       <div class="offcanvas-header bg-[#e0dde3]">
         <h5 class="offcanvas-title">入口連結</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -101,7 +101,7 @@ const toggleRows = () => {
         <button class="h-full hover:bg-[#e0dde3]">車旅休閒</button>
         <button class="h-full hover:bg-[#e0dde3]">活動專區</button>
       </div>
-    </div>
+    </nav>
   </div>
 </template>
 
