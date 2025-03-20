@@ -25,13 +25,13 @@ const scrollToTop = () => {
     <Footer />
   </footer>
 
-  <div class="fixed bottom-[10vh] 2xl:bottom-[45vh] right-4 z-40">
+  <aside class="fixed bottom-[10vh] 2xl:bottom-[45vh] right-4 z-40">
     <div class="relative">
       <img src="/images/agent-avatar.5cdde85.png" class="w-[82px] rounded-full">
       <p class="bg-[#3f3c42] text-white inline-block px-2 py-1 !mb-0 rounded-full absolute -bottom-4 right-4">客服</p>
     </div>
-  </div>
-  <div class="hidden 2xl:block fixed bottom-[4vh] right-5 z-[1500]">
+  </aside>
+  <aside class="hidden 2xl:block fixed bottom-[4vh] right-5 z-[1500]">
     <div class="flex flex-col bg-[#3f3c42] text-white text-sm gap-2 px-2.5 py-6 rounded-[90px]">
       <button class="flex flex-col items-center">
         <i class="bi bi-clock-history"></i>
@@ -54,7 +54,7 @@ const scrollToTop = () => {
         <p>Top</p>
       </button>
     </div>
-  </div>
+  </aside>
 </template>
 
 <style scoped>
