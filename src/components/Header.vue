@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import Dropdown from './Dropdown.vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
@@ -8,24 +8,49 @@ const showTwoRows = ref(false)
 const toggleRows = () => {
   showTwoRows.value = !showTwoRows.value
 }
+
+onMounted(() => {
+  feather.replace()
+})
 </script>
 <template>
   <div>
-    <div class="h-[50px] 2xl:h-[46px] bg-[#3f3c42]">
+    <div class="h-[46px] bg-[#3f3c42]">
       <div class="container-xl flex justify-between items-center px-2 mx-auto">
-        <div class="flex items-center">
+        <div class="flex items-center pl-1 xl:pl-0">
           <button class="h-[46px]"><img src="/images/viva-logo-white.png" class="h-[32px]"></button>
           <button class="h-[46px] pl-6"><img src="/images/logo-right-gif.png" class="h-[46px]"></button>
         </div>
-        <nav class="hidden 2xl:flex items-center gap-4">
-          <div class="text-white p-2"><button><i class="bi bi-cart"></i> 購物車</button></div>
-          <div class="text-white p-2"><button><i class="bi bi-person"></i> 會員專區</button></div>
-          <div class="text-white p-2"><button><i class="bi bi-box-arrow-in-right"></i> 登入</button></div>
+        <nav class="hidden xl:flex items-center gap-4">
+          <div class="text-white p-2">
+            <button class="flex items-center gap-3">
+              <div class="relative"><i data-feather="shopping-cart" class="w-[16px] h-[16px] stroke-3"></i><p class="absolute -top-2 -right-2 bg-[#e60013] text-[#fff] text-[11px] font-bold w-[15px] h-[15px] flex justify-center items-center rounded-full">0</p></div> 購物車
+            </button>
+          </div>
+          <div class="text-white p-2">
+            <button class="flex items-center gap-2">
+              <div><i data-feather="user" class="w-[16px] h-[16px] stroke-3"></i></div> 會員專區
+            </button>
+          </div>
+          <div class="text-white p-2">
+            <button class="flex items-center gap-2">
+              <div><i data-feather="log-in" class="w-[16px] h-[16px] stroke-3"></i></div> 登入
+            </button>
+          </div>
+
         </nav>
-        <nav class="flex 2xl:hidden items-center gap-4">
-          <div class="text-white"><button><i class="bi bi-cart"></i></button></div>
-          <div class="text-white"><button><i class="bi bi-search"></i></button></div>
-          <div class="text-white"><button data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i class="bi bi-list"></i></button></div>
+        <nav class="flex xl:hidden items-center gap-4">
+          <div class="text-white">
+            <button class="flex items-center gap-2">
+              <div class="relative"><i data-feather="shopping-cart" class="w-[20px] h-[20px] stroke-3"></i><p class="absolute -top-2 -right-2 bg-[#e60013] text-[#fff] text-[11px] font-bold w-[15px] h-[15px] flex justify-center items-center rounded-full">0</p></div>
+            </button>
+          </div>
+          <div class="text-white"><button class="flex items-center gap-2"><i data-feather="search" class="w-[20px] h-[20px] stroke-3"></i></button></div>
+          <div class="text-white">
+            <button class="flex items-center gap-2" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+              <i data-feather="menu" class="w-[20px] h-[20px] stroke-3"></i>
+            </button>
+          </div>
         </nav>
       </div>
     </div>
