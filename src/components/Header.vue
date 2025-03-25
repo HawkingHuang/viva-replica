@@ -1,12 +1,18 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, nextTick } from 'vue'
 import Dropdown from './Dropdown.vue'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap'
-const showTwoRows = ref(false)
 
+const showTwoRows = ref(false)
 const toggleRows = () => {
   showTwoRows.value = !showTwoRows.value
+}
+
+const showSideNav = ref(false)
+const toggleSideNav = () => {
+  showSideNav.value = !showSideNav.value
+  nextTick(() => {
+    feather.replace()
+  })
 }
 
 onMounted(() => {
@@ -47,7 +53,10 @@ onMounted(() => {
           </div>
           <div class="text-white"><button class="flex items-center gap-2"><i data-feather="search" class="w-[20px] h-[20px] stroke-3"></i></button></div>
           <div class="text-white">
-            <button class="flex items-center gap-2" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <!-- <button class="flex items-center gap-2" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+              <i data-feather="menu" class="w-[20px] h-[20px] stroke-3"></i>
+            </button> -->
+            <button class="flex items-center gap-2" @click="toggleSideNav">
               <i data-feather="menu" class="w-[20px] h-[20px] stroke-3"></i>
             </button>
           </div>
@@ -107,24 +116,14 @@ onMounted(() => {
         </button>
       </div>
     </nav>
-    <nav class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
-      <div class="offcanvas-header bg-[#e0dde3]">
-        <h5 class="offcanvas-title">入口連結</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <div class="offcanvas-body flex flex-col">
-        <button class="h-full hover:bg-[#e0dde3]">品牌旗艦館</button>
-        <button class="h-full hover:bg-[#e0dde3]">品味生活</button>
-        <button class="h-full hover:bg-[#e0dde3]">質感家電</button>
-        <button class="h-full hover:bg-[#e0dde3]">時尚名品</button>
-        <button class="h-full hover:bg-[#e0dde3]">美妝香氛</button>
-        <button class="h-full hover:bg-[#e0dde3]">健康生活</button>
-        <button class="h-full hover:bg-[#e0dde3]">美味食光</button>
-        <button class="h-full hover:bg-[#e0dde3]">日用清潔</button>
-        <button class="h-full hover:bg-[#e0dde3]">開運珍藏</button>
-        <button class="h-full hover:bg-[#e0dde3]">3C數位</button>
-        <button class="h-full hover:bg-[#e0dde3]">車旅休閒</button>
-        <button class="h-full hover:bg-[#e0dde3]">活動專區</button>
+
+    <nav v-if="showSideNav" class="bg-[#3f3c42] fixed top-0 left-0 w-full z-50 h-[46px] pl-4 pr-2">
+      <div class="flex justify-between h-full">
+        <div class="flex items-center gap-4">
+          <div class="flex items-center text-white text-sm gap-1"><i data-feather="tv" class="w-[15px] h-[15px]"></i> 1台 節目表</div>
+          <div class="flex items-center text-white text-sm gap-1"><i data-feather="tv" class="w-[15px] h-[15px]"></i> 2台 節目表</div>
+        </div>
+        <button @click="showSideNav = false" class="flex items-center text-white"><i data-feather="x-square" class="w-[20px] h-[20px]"></i></button>
       </div>
     </nav>
   </div>
