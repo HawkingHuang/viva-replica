@@ -28,7 +28,7 @@ const scrollToTop = () => {
   <aside class="fixed bottom-[10vh] 2xl:bottom-[45vh] right-4 z-40">
     <div class="relative">
       <img src="/images/agent-avatar.5cdde85.png" class="w-[82px] rounded-full">
-      <p class="bg-[#3f3c42] text-white inline-block px-2 py-1 !mb-0 rounded-full absolute -bottom-4 right-4">客服</p>
+      <p class="bg-[#3f3c42] text-white text-xs 2xl:text-base inline-block px-2 py-1 !mb-0 rounded-full absolute -bottom-4 right-5">客服</p>
     </div>
   </aside>
   <aside class="hidden 2xl:block fixed bottom-[4vh] right-5 z-[1500]">

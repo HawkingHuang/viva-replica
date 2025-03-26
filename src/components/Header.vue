@@ -97,22 +97,22 @@ onMounted(() => {
     <Dropdown />
 
     <nav class="2xl:hidden fixed bottom-0 left-0 w-full bg-[#3f3c42] text-white z-50 h-[50px]">
-      <div class="grid grid-cols-4 !items-center h-full">
+      <div class="grid grid-cols-4 !items-center h-full pt-1">
         <button class="flex flex-col items-center">
-          <i class="bi bi-clock-history"></i>
-          <p>瀏覽紀錄</p>
+          <i data-feather="clock" class="w-[15px] h-[15px]"></i>
+          <p class="text-xs !mb-0.5">瀏覽紀錄</p>
         </button>
         <button class="flex flex-col items-center">
-          <i class="bi bi-credit-card-2-back"></i>
-          <p>刷卡優惠</p>
+          <i data-feather="credit-card" class="w-[15px] h-[15px]"></i>
+          <p class="text-xs !mb-0.5">刷卡優惠</p>
         </button>
         <button class="flex flex-col items-center">
-          <i class="bi bi-file-text"></i>
-          <p>訂單查詢</p>
+          <i data-feather="file-text" class="w-[15px] h-[15px]"></i>
+          <p class="text-xs !mb-0.5">訂單查詢</p>
         </button>
         <button class="flex flex-col items-center">
-          <i class="bi bi-person"></i>
-          <p>會員專區</p>
+          <i data-feather="user" class="w-[15px] h-[15px]"></i>
+          <p class="text-xs !mb-0.5">會員專區</p>
         </button>
       </div>
     </nav>
