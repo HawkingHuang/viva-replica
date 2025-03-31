@@ -33,6 +33,25 @@ const leftSideNav = ref([
   '車旅休閒',
   '活動專區'
 ])
+
+const rightSideNav = ref([
+  '聯馥食品專館',
+  '【勝崎生鮮】',
+  '亞帝芬奇',
+  'de Buyer 畢耶',
+  'Sabre Paris',
+  'M2nd珍稀皮革',
+  '日本HARIO',
+  '台塑生醫館',
+  '波西米亞人',
+  '茶寶',
+  '大侑食尚生活',
+  '3M生活',
+  '好好生醫&盈翠絲',
+  '開運方程式',
+  'AOTTO',
+  '藏寓',
+])
 </script>
 <template>
   <div>
@@ -150,7 +169,12 @@ const leftSideNav = ref([
           <div class="flex items-center h-[40px] bg-[#f8f9fa]"><i class="bi bi-youtube text-[22px] text-[#ff0000]"></i></div>
         </div>
       </div>
-      <div class="col-span-2"></div>
+      <div class="col-span-2 relative">
+        <nav class="bg-[#5c5365] text-[#fff] !text-xs md:!text-sm xl:!text-base flex !overflow-x-auto">
+          <button v-for="button in rightSideNav" :key="button" class="h-[50px] shrink-0 mx-3">{{ button }}</button>
+        </nav>
+        <button class="h-[50px] bg-[#5c5365] text-[#fff] !text-xs md:!text-sm xl:!text-base absolute top-0 right-0 px-2.5"><i data-feather="chevron-down" class="w-[15px] h-[15px] stroke-3"></i></button>
+      </div>
     </div>
   </div>
 </template>

@@ -50,7 +50,7 @@ const scrollToTop = () => {
         <p>會員專區</p>
       </button>
       <button class="flex flex-col items-center" @click="scrollToTop">
-        <i class="bi bi-chevron-up"></i>
+        <i data-feather="chevron-up" class="w-[15px] h-[15px] stroke-3"></i>
         <p>Top</p>
       </button>
     </div>
