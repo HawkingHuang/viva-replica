@@ -135,7 +135,7 @@ const toggleMobileRightSideNav = () => {
 
     <Dropdown />
 
-    <nav class="2xl:hidden fixed bottom-0 left-0 w-full bg-[#3f3c42] text-white z-50 h-[50px]">
+    <nav v-if="!showSideNav" class="2xl:hidden fixed bottom-0 left-0 w-full bg-[#3f3c42] text-white z-50 h-[50px]">
       <div class="grid grid-cols-4 !items-center h-full pt-1">
         <button class="flex flex-col items-center">
           <i data-feather="clock" class="w-[15px] h-[15px] stroke-3"></i>
@@ -187,6 +187,189 @@ const toggleMobileRightSideNav = () => {
         <button v-else @click="toggleMobileRightSideNav" class="h-[50px] bg-[#5c5365] text-[#fff] !text-xs md:!text-sm xl:!text-base absolute top-0 right-0 px-2.5">
           <i data-feather="chevron-up" class="w-[15px] h-[15px] stroke-3"></i>
         </button>
+        <section>
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">聯馥食品專館</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>好挑肉品</button>
+              <button>歐美精選美食</button>
+            </div>
+          </div>
+        
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">【勝崎生鮮】</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>活動專區</button>
+              <button>鍋物涮肉專區</button>
+              <button>牛肉專區</button>
+              <button>羊排專區</button>
+              <button>國產豬肉</button>
+              <button>雞肉專區</button>
+              <button>鴨胸專區</button>
+              <button>海鮮專區</button>
+              <button>即食/冷凍/便利食品 專區</button>
+            </div>
+          </div>
+        
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">亞帝芬奇</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>戒指</button>
+              <button>耳環</button>
+              <button>項鍊</button>
+              <button>手鍊</button>
+              <button>男戒</button>
+            </div>
+          </div>
+        
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">de Buyer 畢耶</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>原礦蜂蠟系列鐵鍋</button>
+              <button>藍鐵系列鐵鍋</button>
+              <button>CHOC經典不沾鍋</button>
+            </div>
+          </div>
+        
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">Sabre Paris</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>Bistrot復古酒館系列</button>
+              <button>Bistrot禮盒三件組</button>
+              <button>限量系列</button>
+            </div>
+          </div>
+        
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">M2nd珍稀皮革</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>精選包款</button>
+              <button>真鱷腹皮</button>
+              <button>真鱷背皮</button>
+              <button>鴕鳥皮</button>
+              <button>皮夾／零錢包</button>
+              <button>配件</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">日本HARIO</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>濾杯/濾紙</button>
+              <button>咖啡虹吸/分享壺</button>
+              <button>咖啡其他器具</button>
+              <button>冷水壺/茶具用品</button>
+              <button>餐廚用品</button>
+              <button>寵物用品</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">台塑生醫館</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>本月特惠</button>
+              <button>居家清潔</button>
+              <button>洗顏/沐浴/洗髮</button>
+              <button>美妝保養</button>
+              <button>保健養生</button>
+              <button>口腔護理</button>
+              <button>嬰幼專區</button>
+              <button>PURESCENT</button>
+              <button>DF美肌醫生</button>
+              <button>FORTE</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">波西米亞人</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>法國雷曼</button>
+              <button>RONA樂娜</button>
+              <button>西班牙Pulltex</button>
+              <button>BOHEMIA波西米亞</button>
+              <button>其他品牌</button>
+              <button>Chef & Sommelier</button>
+              <button>冰桶/醒酒器</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">茶寶</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>淨覺茶-居家潔淨</button>
+              <button>潤覺茶-清潔保養</button>
+              <button>自然力-天然香氛</button>
+              <button>防蚊/除蟲</button>
+              <button>文創結合</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">大侑食尚生活</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>Vitamix</button>
+              <button>Vitaway</button>
+              <button>兆鼎</button>
+              <button>橙寶</button>
+              <button>Vita Codes</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">3M生活</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>日常護理</button>
+              <button>居家寢具</button>
+              <button>家用清潔</button>
+              <button>生活家電</button>
+              <button>濾水用品</button>
+              <button>濾芯/濾網配件</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">好好生醫&盈翠絲</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>好好生醫</button>
+              <button>盈翠絲</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">開運方程式</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>開運飾品</button>
+              <button>配件小物</button>
+              <button>風水擺飾</button>
+              <button>水晶奇石</button>
+              <button>藝品珍藏</button>
+              <button>神佛瑞獸</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">AOTTO</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>收納</button>
+              <button>傢俱</button>
+              <button>戶外露營</button>
+              <button>寵物用品</button>
+              <button>生活用品</button>
+            </div>
+          </div>
+
+          <div class="p-2 mb-4">
+            <p class="border-b border-slate-200 pl-2 pb-1">藏寓</p>
+            <div class="grid grid-cols-3 text-center">
+              <button>寢具</button>
+              <button>衛浴</button>
+              <button>香氛</button>
+              <button>家飾／配件</button>
+              <button>餐具</button>
+              <button>藝術收藏</button>
+            </div>
+          </div>
+        </section>        
       </div>
     </div>
   </div>
