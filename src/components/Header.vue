@@ -2,6 +2,10 @@
 import { onMounted, ref, nextTick } from 'vue'
 import Dropdown from './Dropdown.vue'
 
+onMounted(() => {
+  feather.replace()
+})
+
 const showTwoRows = ref(false)
 const toggleRows = () => {
   showTwoRows.value = !showTwoRows.value
@@ -15,9 +19,20 @@ const toggleSideNav = () => {
   })
 }
 
-onMounted(() => {
-  feather.replace()
-})
+const leftSideNav = ref([
+  '品牌旗艦館',
+  '品味生活',
+  '質感家電',
+  '時尚名品',
+  '美妝香氛',
+  '健康生活',
+  '美味食光',
+  '日用清潔',
+  '開運珍藏',
+  '3C數位',
+  '車旅休閒',
+  '活動專區'
+])
 </script>
 <template>
   <div>
@@ -117,12 +132,26 @@ onMounted(() => {
     <nav v-if="showSideNav" class="bg-[#3f3c42] fixed top-0 left-0 w-full z-50 h-[46px] pl-4 pr-2">
       <div class="flex justify-between h-full">
         <div class="flex items-center gap-4">
-          <div class="flex items-center text-white text-sm gap-1"><i data-feather="tv" class="w-[15px] h-[15px]"></i> 1台 節目表</div>
-          <div class="flex items-center text-white text-sm gap-1"><i data-feather="tv" class="w-[15px] h-[15px]"></i> 2台 節目表</div>
+          <div class="flex items-center text-white text-base gap-1"><i data-feather="tv" class="w-[15px] h-[15px]"></i> 1台 節目表</div>
+          <div class="flex items-center text-white text-base gap-1"><i data-feather="tv" class="w-[15px] h-[15px]"></i> 2台 節目表</div>
         </div>
         <button @click="showSideNav = false" class="flex items-center text-white"><i data-feather="x-square" class="w-[20px] h-[20px]"></i></button>
       </div>
     </nav>
+
+    <div v-if="showSideNav" class="grid grid-cols-3">
+      <div class="col-span-1 bg-[#f8f9fa]">
+        <div class="flex flex-col border-b border-slate-200">
+          <button v-for="button in leftSideNav" :key="button" class="hover:bg-[#8f849a] hover:text-[#fff] h-[50px]">{{ button }}</button>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="flex items-center h-[40px] bg-[#f8f9fa]"><i class="bi bi-line text-[22px] text-[#00c300]"></i></div>
+          <div class="flex items-center h-[40px] bg-[#f8f9fa]"><i class="bi bi-facebook text-[22px] text-[#1877f2]"></i></div>
+          <div class="flex items-center h-[40px] bg-[#f8f9fa]"><i class="bi bi-youtube text-[22px] text-[#ff0000]"></i></div>
+        </div>
+      </div>
+      <div class="col-span-2"></div>
+    </div>
   </div>
 </template>
 
