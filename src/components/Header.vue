@@ -52,6 +52,14 @@ const rightSideNav = ref([
   'AOTTO',
   '藏寓',
 ])
+
+const mobileRightSideNavWrap = ref(false)
+const toggleMobileRightSideNav = () => {
+  mobileRightSideNavWrap.value = !mobileRightSideNavWrap.value
+  nextTick(() => {
+    feather.replace()
+  })
+}
 </script>
 <template>
   <div>
@@ -170,10 +178,15 @@ const rightSideNav = ref([
         </div>
       </div>
       <div class="col-span-2 relative">
-        <nav class="bg-[#5c5365] text-[#fff] !text-xs md:!text-sm xl:!text-base flex !overflow-x-auto">
+        <nav :class="{'!overflow-x-auto': !mobileRightSideNavWrap, 'flex-wrap': mobileRightSideNavWrap}" class="bg-[#5c5365] text-[#fff] !text-xs md:!text-sm xl:!text-base flex">
           <button v-for="button in rightSideNav" :key="button" class="h-[50px] shrink-0 mx-3">{{ button }}</button>
         </nav>
-        <button class="h-[50px] bg-[#5c5365] text-[#fff] !text-xs md:!text-sm xl:!text-base absolute top-0 right-0 px-2.5"><i data-feather="chevron-down" class="w-[15px] h-[15px] stroke-3"></i></button>
+        <button v-if="!mobileRightSideNavWrap" @click="toggleMobileRightSideNav" class="h-[50px] bg-[#5c5365] text-[#fff] !text-xs md:!text-sm xl:!text-base absolute top-0 right-0 px-2.5">
+          <i data-feather="chevron-down" class="w-[15px] h-[15px] stroke-3"></i>
+        </button>
+        <button v-else @click="toggleMobileRightSideNav" class="h-[50px] bg-[#5c5365] text-[#fff] !text-xs md:!text-sm xl:!text-base absolute top-0 right-0 px-2.5">
+          <i data-feather="chevron-up" class="w-[15px] h-[15px] stroke-3"></i>
+        </button>
       </div>
     </div>
   </div>
