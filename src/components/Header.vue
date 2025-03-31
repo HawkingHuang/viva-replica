@@ -142,7 +142,7 @@ const leftSideNav = ref([
     <div v-if="showSideNav" class="grid grid-cols-3">
       <div class="col-span-1 bg-[#f8f9fa]">
         <div class="flex flex-col border-b border-slate-200">
-          <button v-for="button in leftSideNav" :key="button" class="hover:bg-[#8f849a] hover:text-[#fff] h-[50px]">{{ button }}</button>
+          <button v-for="button in leftSideNav" :key="button" class="hover:bg-[#8f849a] hover:text-[#fff] h-[50px] !text-xs md:!text-sm xl:!text-base">{{ button }}</button>
         </div>
         <div class="flex flex-col items-center">
           <div class="flex items-center h-[40px] bg-[#f8f9fa]"><i class="bi bi-line text-[22px] text-[#00c300]"></i></div>
