@@ -187,7 +187,7 @@ const toggleMobileRightSideNav = () => {
         <button v-else @click="toggleMobileRightSideNav" class="h-[50px] bg-[#5c5365] text-[#fff] !text-xs md:!text-sm xl:!text-base absolute top-0 right-0 px-2.5">
           <i data-feather="chevron-up" class="w-[15px] h-[15px] stroke-3"></i>
         </button>
-        <section>
+        <section class="overflow-y-auto h-[90vh] !text-xs md:!text-sm xl:!text-base">
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">聯馥食品專館</p>
             <div class="grid grid-cols-3 text-center">
