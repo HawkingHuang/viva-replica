@@ -169,7 +169,7 @@ const toggleMobileRightSideNav = () => {
     <div v-if="showSideNav" class="grid grid-cols-3">
       <div class="col-span-1 bg-[#f8f9fa]">
         <div class="flex flex-col border-b border-slate-200">
-          <button v-for="button in leftSideNav" :key="button" class="hover:bg-[#8f849a] hover:text-[#fff] h-[50px] !text-xs md:!text-sm xl:!text-base">{{ button }}</button>
+          <button v-for="button in leftSideNav" :key="button" class="hover:bg-[#8f849a] hover:text-[#fff] first:bg-[#8f849a] first:text-[#fff] h-[50px] !text-xs md:!text-sm xl:!text-base">{{ button }}</button>
         </div>
         <div class="flex flex-col items-center">
           <div class="flex items-center h-[40px] bg-[#f8f9fa]"><i class="bi bi-line text-[22px] text-[#00c300]"></i></div>
@@ -190,7 +190,7 @@ const toggleMobileRightSideNav = () => {
         <section class="overflow-y-auto h-[90vh] !text-xs md:!text-sm xl:!text-base">
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">聯馥食品專館</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>好挑肉品</button>
               <button>歐美精選美食</button>
             </div>
@@ -198,7 +198,7 @@ const toggleMobileRightSideNav = () => {
         
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">【勝崎生鮮】</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>活動專區</button>
               <button>鍋物涮肉專區</button>
               <button>牛肉專區</button>
@@ -213,7 +213,7 @@ const toggleMobileRightSideNav = () => {
         
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">亞帝芬奇</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>戒指</button>
               <button>耳環</button>
               <button>項鍊</button>
@@ -224,7 +224,7 @@ const toggleMobileRightSideNav = () => {
         
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">de Buyer 畢耶</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>原礦蜂蠟系列鐵鍋</button>
               <button>藍鐵系列鐵鍋</button>
               <button>CHOC經典不沾鍋</button>
@@ -233,7 +233,7 @@ const toggleMobileRightSideNav = () => {
         
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">Sabre Paris</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>Bistrot復古酒館系列</button>
               <button>Bistrot禮盒三件組</button>
               <button>限量系列</button>
@@ -242,7 +242,7 @@ const toggleMobileRightSideNav = () => {
         
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">M2nd珍稀皮革</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>精選包款</button>
               <button>真鱷腹皮</button>
               <button>真鱷背皮</button>
@@ -254,7 +254,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">日本HARIO</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>濾杯/濾紙</button>
               <button>咖啡虹吸/分享壺</button>
               <button>咖啡其他器具</button>
@@ -266,7 +266,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">台塑生醫館</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>本月特惠</button>
               <button>居家清潔</button>
               <button>洗顏/沐浴/洗髮</button>
@@ -282,7 +282,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">波西米亞人</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>法國雷曼</button>
               <button>RONA樂娜</button>
               <button>西班牙Pulltex</button>
@@ -295,7 +295,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">茶寶</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>淨覺茶-居家潔淨</button>
               <button>潤覺茶-清潔保養</button>
               <button>自然力-天然香氛</button>
@@ -306,7 +306,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">大侑食尚生活</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>Vitamix</button>
               <button>Vitaway</button>
               <button>兆鼎</button>
@@ -317,7 +317,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">3M生活</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>日常護理</button>
               <button>居家寢具</button>
               <button>家用清潔</button>
@@ -329,7 +329,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">好好生醫&盈翠絲</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>好好生醫</button>
               <button>盈翠絲</button>
             </div>
@@ -337,7 +337,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">開運方程式</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>開運飾品</button>
               <button>配件小物</button>
               <button>風水擺飾</button>
@@ -349,7 +349,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">AOTTO</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>收納</button>
               <button>傢俱</button>
               <button>戶外露營</button>
@@ -360,7 +360,7 @@ const toggleMobileRightSideNav = () => {
 
           <div class="p-2 mb-4">
             <p class="border-b border-slate-200 pl-2 pb-1">藏寓</p>
-            <div class="grid grid-cols-3 text-center">
+            <div class="grid grid-cols-3 text-center gap-y-4 gap-x-2 items-start">
               <button>寢具</button>
               <button>衛浴</button>
               <button>香氛</button>
